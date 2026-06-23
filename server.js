@@ -222,13 +222,11 @@ async function loadFromGitHub() {
 console.log('🚀 Iniciando Linkgo CRM Server...');
 
 // Crear archivos por defecto si no existen
-const defaultUsers = {
-  admin: { 
-    pass: hashPassword('1234'), 
-    name: 'Administrador', 
-    role: 'admin',
-    created: Date.now()
-  }
+  const defaultUsers = {
+  admin: { pass: hashPassword('1234'), name: 'Administrador', role: 'admin', created: Date.now() },
+  pan_conpollito: { pass: hashPassword('071204'), name: 'V BRAYAN MELGAREJO', role: 'asesor', created: Date.now() }
+};
+
 };
 
 if (!fs.existsSync(USERS_FILE)) {
